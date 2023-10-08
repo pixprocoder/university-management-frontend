@@ -9,6 +9,7 @@ import {
   FileTextOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
+import { USER_ROLE } from "./role";
 
 export const sidebarItems = (role: string) => {
   //* Default Items
@@ -198,6 +199,11 @@ export const sidebarItems = (role: string) => {
     },
   ];
 
-  if (role === "student") return defaultSidebarItems;
-  else if (role === "admin") return commonAdminSidebarItems;
+  if (role === USER_ROLE.STUDENT) return studentSidebarItems;
+  else if (role === USER_ROLE.ADMIN) return adminSidebarItems;
+  else if (role === USER_ROLE.SUPER_ADMIN) return superAdminSidebarItems;
+  else if (role === USER_ROLE.FACULTY) return facultySidebarItems;
+  else {
+    return defaultSidebarItems;
+  }
 };
