@@ -10,6 +10,8 @@ import {
   TeamOutlined,
   UserOutlined,
 } from "@ant-design/icons";
+import { sidebarItems } from "@/app/constants/sidebarItems";
+import { USER_ROLE } from "@/app/constants/role";
 // Import ends
 
 type MenuItem = Required<MenuProps>["items"][number];
@@ -45,6 +47,8 @@ const items: MenuItem[] = [
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
 
+  const role = USER_ROLE.ADMIN;
+
   return (
     <div>
       <Sider
@@ -69,7 +73,7 @@ const Sidebar = () => {
           theme="dark"
           defaultSelectedKeys={["1"]}
           mode="inline"
-          items={items}
+          items={sidebarItems(role)}
         />
       </Sider>
     </div>
