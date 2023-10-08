@@ -53,7 +53,18 @@ const Sidebar = () => {
         collapsed={collapsed}
         onCollapse={(value) => setCollapsed(value)}
       >
-        <div className="demo-logo-vertical" />
+        <div
+          style={{
+            fontSize: "1.5rem",
+            textAlign: "center",
+            fontWeight: "bold",
+            color: "white",
+            marginBottom: "1rem",
+          }}
+          className="demo-logo-vertical"
+        >
+          PH-UNIVERSITY
+        </div>
         <Menu
           theme="dark"
           defaultSelectedKeys={["1"]}
