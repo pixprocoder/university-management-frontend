@@ -19,17 +19,28 @@ const Login = () => {
     } catch (error) {}
   };
   return (
-    <Row>
+    //TODO: fix gap
+    <Row justify="space-around" align="middle" style={{ minHeight: "100vh" }}>
       <Col sm={12} md={16} lg={16}>
         <Image src={loginImage} alt="loginImage" width={500} />
       </Col>
       <Col sm={12} md={8} lg={8}>
-        <h1>First Login Your Account</h1>
+        <h1
+          style={{
+            margin: "0.5rem 0",
+          }}
+        >
+          First Login Your Account
+        </h1>
         <Form submitHandler={onSubmit}>
           <div>
             <FormInput name="id" type="text" size="large" label="Username" />
           </div>
-          <div>
+          <div
+            style={{
+              margin: "0.5rem 0",
+            }}
+          >
             <FormInput
               name="password"
               type="password"
