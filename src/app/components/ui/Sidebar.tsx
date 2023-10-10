@@ -11,6 +11,7 @@ const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   const role = USER_ROLE.ADMIN;
+
   return (
     <div>
       <Sider
@@ -29,7 +30,7 @@ const Sidebar = () => {
           }}
           className="demo-logo-vertical"
         >
-          PH-UNIVERSITY
+          PH-UMS
         </div>
         <Menu
           theme="dark"

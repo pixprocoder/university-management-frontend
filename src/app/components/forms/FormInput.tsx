@@ -24,6 +24,7 @@ const FormInput = ({
   label,
 }: IInput) => {
   const { control } = useFormContext();
+
   return (
     <>
       {label ? label : null}

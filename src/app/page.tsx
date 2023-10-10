@@ -1,7 +1,11 @@
+import { Row } from "antd";
+
 export default function Home() {
   return (
     <main>
-      <h1>HI Frontend</h1>
+      <Row justify="center" align="middle" style={{ height: "100vh" }}>
+        <h3> University Management System</h3>
+      </Row>
     </main>
   );
 }

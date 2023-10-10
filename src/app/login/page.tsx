@@ -20,21 +20,26 @@ const Login = () => {
   };
   return (
     //TODO: fix gap
-    <Row justify="space-around" align="middle" style={{ minHeight: "100vh" }}>
-      <Col sm={12} md={16} lg={16}>
+    <Row
+      justify="space-around"
+      align="middle"
+      style={{ minHeight: "100vh", margin: "0 16px" }}
+    >
+      <Col sm={12} md={16} lg={14}>
         <Image src={loginImage} alt="loginImage" width={500} />
       </Col>
-      <Col sm={12} md={8} lg={8}>
+      <Col sm={12} md={8} lg={10}>
         <h1
           style={{
+            color: "blue",
             margin: "0.5rem 0",
           }}
         >
-          First Login Your Account
+          Login Your Account To Start
         </h1>
         <Form submitHandler={onSubmit}>
           <div>
-            <FormInput name="id" type="text" size="large" label="Username" />
+            <FormInput name="id" type="text" size="large" label="User Id" />
           </div>
           <div
             style={{

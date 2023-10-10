@@ -1,10 +1,11 @@
+import { Row, Spin } from "antd";
 import React from "react";
 
 const Loading = () => {
   return (
-    <div>
-      <h1>Loading...</h1>
-    </div>
+    <Row justify="center" align="middle" style={{ height: "100vh" }}>
+      <Spin></Spin>
+    </Row>
   );
 };
 

@@ -24,7 +24,11 @@ const UMBreadCrumb = ({ items }: any) => {
     }),
   ];
 
-  return <Breadcrumb items={breadCrumbItems} />;
+  return (
+    <div>
+      <Breadcrumb items={breadCrumbItems} />
+    </div>
+  );
 };
 
 export default UMBreadCrumb;

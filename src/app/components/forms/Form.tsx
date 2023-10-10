@@ -11,6 +11,7 @@ type FormProps = {
   submitHandler: SubmitHandler<any>;
 } & FormConfig;
 
+// component start
 const Form = ({ children, submitHandler, defaultValues }: FormProps) => {
   const formConfig: FormConfig = {};
 
