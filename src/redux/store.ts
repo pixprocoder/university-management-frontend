@@ -1,9 +1,13 @@
+import { baseApi } from "./api/baseApi";
 import { reducer } from "./rootReducer";
 export { reducer };
 import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({
   reducer,
+  middleware: (getDefaultMiddleware) => {
+    return getDefaultMiddleware().concat(baseApi.middleware);
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
