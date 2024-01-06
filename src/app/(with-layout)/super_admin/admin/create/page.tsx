@@ -1,9 +1,12 @@
 "use client";
 import Form from "@/app/components/forms/Form";
 import FormInput from "@/app/components/forms/FormInput";
-import { Col, Row } from "antd";
+import FormSelectField from "@/app/components/forms/FormSelectField";
+import { departmentOptions, genderOptions } from "@/app/constants/globals";
+import { Button, Col, Row } from "antd";
 
 const CreateAdmin = () => {
+  //@ts-ignore
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     try {
       console.log(data);
@@ -35,7 +38,7 @@ const CreateAdmin = () => {
               <FormInput
                 type="text"
                 size="large"
-                name="name"
+                name="admin.name.firstName"
                 label="First Name"
               />
             </Col>
@@ -47,7 +50,7 @@ const CreateAdmin = () => {
               <FormInput
                 type="text"
                 size="large"
-                name="name"
+                name="admin.name.middleName"
                 label="Middle Name"
               />
             </Col>
@@ -59,7 +62,7 @@ const CreateAdmin = () => {
               <FormInput
                 type="text"
                 size="large"
-                name="name"
+                name="admin.name.lastName"
                 label="Last Name"
               />
             </Col>
@@ -75,7 +78,36 @@ const CreateAdmin = () => {
                 label="Password"
               />
             </Col>
+            <Col
+              className="gutter-row"
+              span={8}
+              style={{ marginBottom: "10px" }}
+            >
+              <FormSelectField
+                size="large"
+                name="admin.gender"
+                options={genderOptions}
+                placeholder="Select"
+                label="Gender"
+              />
+            </Col>
+            <Col
+              className="gutter-row"
+              span={8}
+              style={{ marginBottom: "10px" }}
+            >
+              <FormSelectField
+                size="large"
+                name="admin.managementDepartment"
+                options={departmentOptions}
+                placeholder="Select"
+                label="Department"
+              />
+            </Col>
           </Row>
+          <Button htmlType="submit" type="primary">
+            Submit
+          </Button>
         </div>
       </Form>
     </div>
