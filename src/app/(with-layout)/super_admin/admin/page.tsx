@@ -1,9 +1,15 @@
-import React from "react";
+import ActionBar from "@/app/components/ui/ActionBar";
+import { Button } from "antd";
+import Link from "next/link";
 
 const ManageAdminPage = () => {
   return (
     <div>
-      <h1>Manage Admin</h1>
+      <ActionBar title="Manage Admin lists">
+        <Link href="/super_admin/admin/create">
+          <Button type="primary">Create admin</Button>
+        </Link>
+      </ActionBar>
     </div>
   );
 };
