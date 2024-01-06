@@ -10,7 +10,7 @@ import { USER_ROLE } from "@/app/constants/role";
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
 
-  const role = USER_ROLE.ADMIN;
+  const role = USER_ROLE.SUPER_ADMIN;
 
   return (
     <div>
